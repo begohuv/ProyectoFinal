@@ -13,8 +13,8 @@
     <body>
         <div class="head">
             <h1>Bienvenido al Muro de : ${usuario.nombre} ${usuario.apellido}</h1>
-            <a href="javascript:cerrar();">Salir</a>             
-            <a href="volverMuro.curso?idAnfitrion=${anfitrion.id}"><h4>Volver a su muro ${anfitrion.nombre}</h4></a>
+            <a href="javascript:cerrar();">Salir <img class="imag3" src="../imagenes/salir.jpg" alt="Salir"/></a>             
+            <a href="volverMuro.curso?idAnfitrion=${anfitrion.id}"><h4>Volver a su muro ${anfitrion.nombre} <img class="imag3" src="../imagenes/back.jpg" alt="Volver"/></h4></a>
         </div>
         <div class="left">
             <h3>Amigos :  <img class="imag1" src="../imagenes/emoticonosfinal.jpg" alt="Amigos"/></h3>            
@@ -32,6 +32,7 @@
             </c:if>           
         </div>
         <div class="middle">            
+            <h3> Comentarios:  <img src="../imagenes/Comment.ico" alt="Comentario"/></h3>
             <c:if test="${vacio == true}">
                 <h3> Comentarios:  <img src="../imagenes/Comment.ico" alt="Comentario"/></h3>
                 <h4>No existen contenidos</h4>
@@ -42,8 +43,8 @@
                         <li>                                        
                             <h4>Contenido: </h4>${contenido.texto}                                        
                         </li>                                     
-                        <a href="mostrarComentario.curso?id=${contenido.id}&idUsuario=${anfitrion.id}&idUsuarioAmigo=${usuario.id}"><h5>Añadir Comentario</h5></a>                                                       
-                        <a class="borrar" href="borrarContenidoComentario.curso?id=${contenido.id}&idUsuario=${usuario.id}"><h5>Eliminar</h5></a>                                                        
+                        <a href="mostrarComentario.curso?id=${contenido.id}&idUsuario=${anfitrion.id}&idUsuarioAmigo=${usuario.id}"><h5><img class="imag2" src="../imagenes/Add.ico" alt="Añadir"/> Añadir Comentario</h5></a>                                                       
+                        <a class="borrar" href="borrarContenidoComentario.curso?id=${contenido.id}&idUsuario=${usuario.id}"><h5><img class="imag2" src="../imagenes/Delete.ico" alt="Eliminar"/> Eliminar</h5></a>                                                        
                     </c:forEach>
                 </ul>
             </c:if>
@@ -58,7 +59,7 @@
                 <ul>
                     <c:forEach  items="${usuarios}" var="otroUsuario">
                         <li>
-                            ${otroUsuario.nombre} ${otroUsuario.apellido}                           
+                            <h4>${otroUsuario.nombre} ${otroUsuario.apellido}</h4>                           
                         </li>                                                            
                     </c:forEach>
                 </ul>

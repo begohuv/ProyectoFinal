@@ -81,8 +81,7 @@ public class controladorEntrada {
      @RequestMapping(value = "login.curso", method = RequestMethod.POST)
     public String procesarFormulario(@Valid @ModelAttribute("usuario") Usuario usuario, Model model) {
         Usuario u = su.compUsuario(usuario);        
-        if (u == null) {       
-//            errores.rejectValue("nombre", "nombre.corto", "El usuario no existe .Registrese");
+        if (u == null) {       //            
             usuario.setId(0L);
             usuario.setNombre("El usuario no existe .Registrese");
             model.addAttribute("usuario", usuario);
@@ -116,8 +115,7 @@ public class controladorEntrada {
     @RequestMapping(value = "crearcuenta.curso", method = RequestMethod.POST)
     public String procesarFormularioAlta(@Valid @ModelAttribute("usuario2") Usuario usuario2, BindingResult errores, Model model) {       
         Usuario u = su.compUsuario(usuario2);       
-        if (u == null) {
-           // errores.rejectValue("nombre", "nombre.corto", "Esto es la CHAPU");
+        if (u == null) {           
             Boolean valor = su.crearUsuario(usuario2);
             model.addAttribute("usuario", usuario2);
             model.addAttribute("info", valor ? "Cuenta creada" : "Cuenta no creada");

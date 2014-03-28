@@ -23,6 +23,24 @@ img.imag1{
     
 
 }
+img.imag2{
+    width: 20px;
+    height: 20px;
+    
+
+}
+img.imag3{
+    width: 30px;
+    height: 30px;
+    
+
+}
+img.imag4{
+    width: 70px;
+    height: 70px;
+    
+
+}
 img.comentario{    
     float: right;    
     text-align: center;
@@ -34,6 +52,12 @@ h1{
     font-style: italic;                 
     text-align: center;
     color:#000099;
+   
+}
+h1.error{
+    font-style: italic;                 
+    text-align: center;
+    color:red;
    
 }
 

@@ -19,7 +19,7 @@
     <body>
         <div class="head">
             <h1>Bienvenido al Muro de : ${usuario.nombre} ${usuario.apellido}</h1>
-            <a href="javascript:cerrar();">Salir</a> 
+            <a href="javascript:cerrar();">Salir <img class="imag3" src="../imagenes/back.jpg" alt="Volver"/></a> 
         </div>
         <div class="left">
             <h3>Mis Amigos :   <img class="imag1" src="../imagenes/emoticonosfinal.jpg" alt="Amigos"/> </h3>            
@@ -31,7 +31,7 @@
                     <c:forEach  items="${amigos}" var="amigos">
                         <li>
                             <a href="muroAmigo.curso?idUsuario=${usuario.id}&idAmigo=${amigos.id}"><h4> ${amigos.nombre} ${amigos.apellido}</h4></a>                            
-                            <a class="borrar" href="borrarAmigo.curso?idUsuario=${usuario.id}&idAmigo=${amigos.id}"><h5>Eliminar</h5></a>                                            
+                            <a class="borrar" href="borrarAmigo.curso?idUsuario=${usuario.id}&idAmigo=${amigos.id}"><h5><img class="imag2" src="../imagenes/Delete.ico" alt="Eliminar"/> Eliminar</h5></a>                                            
                         </li>                                                                    
                     </c:forEach>                                            
                 </ul>
@@ -44,7 +44,7 @@
                     <h3>Escriba su mensaje<img src="../imagenes/Comment.ico" alt="Comentario"/></h3>                           
                     <tr>
                         <td>                                   
-                            <form:textarea path="texto" rows="5" cols="35"/>
+                            <form:textarea path="texto" rows="5" cols="35" autofocus="true"/>
                         </td>
                         <td>                         
                             <form:errors path="texto"/>                    
@@ -66,8 +66,8 @@
                         <li>
                             <h4>Contenido: </h4>${contenido.texto}
                         </li>                                                        
-                        <a href="mostrarComentario.curso?id=${contenido.id}&idUsuario=${usuario.id}&idUsuarioAmigo=${usuario.id}"><h5>Añadir Comentario</h5></a>                                                                                                                            
-                        <a class="borrar" href="borrarContenido.curso?id=${contenido.id}&idUsuario=${usuario.id}"><h5>Eliminar</h5></a>   
+                        <a href="mostrarComentario.curso?id=${contenido.id}&idUsuario=${usuario.id}&idUsuarioAmigo=${usuario.id}"><h5><img class="imag2" src="../imagenes/Add.ico" alt="Añadir"/> Añadir Comentario</h5></a>                                                                                                                            
+                        <a class="borrar" href="borrarContenido.curso?id=${contenido.id}&idUsuario=${usuario.id}"><h5><img class="imag2" src="../imagenes/Delete.ico" alt="Eliminar"/> Eliminar</h5></a>   
                     </c:forEach>
                 </ul>
             </c:if>

@@ -18,17 +18,17 @@
         <h1>Comentario del Muro de :  ${usuarioAmigo.nombre}</h1>                 
         <div class="middlec">
             <c:if test="${usuario.id == usuarioAmigo.id}">
-                <a href="volverMuro.curso?idAnfitrion=${usuario.id}">Volver </a> 
+                <a href="volverMuro.curso?idAnfitrion=${usuario.id}">Volver <img class="imag3" src="../imagenes/back.jpg" alt="Volver"/></a> 
             </c:if>
             <c:if test="${usuario.id != usuarioAmigo.id}">
-                <a href="muroAmigo.curso?idUsuario=${usuario.id}&idAmigo=${usuarioAmigo.id}">Volver </a> 
+                <a href="muroAmigo.curso?idUsuario=${usuario.id}&idAmigo=${usuarioAmigo.id}">Volver <img class="imag3" src="../imagenes/back.jpg" alt="Volver"/></a> 
             </c:if>
             <form:form commandName="comentarioDto" action="comentario.curso?idUsuario=${usuario.id}&idUsuarioAmigo=${usuarioAmigo.id}&idContenido=${contenido.id}">                
                 <h3>Escriba un Comentario :  ${usuario.nombre} <img src="../imagenes/Comment.ico" alt="Comentario"/></h3> 
                 <table>                    
                     <tr>
                         <td>
-                            <form:textarea path="texto" rows="5" cols="35"/>
+                            <form:textarea path="texto" rows="5" cols="35" autofocus="true"/>
                         </td>
                         <td>
                             <form:errors path="texto"/>
