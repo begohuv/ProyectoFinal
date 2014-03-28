@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-mar-2014, 12:03:17
+    Author     : Administrador
+*/
+html {
+    margin:0;
+    border:0;
+    padding:0;
+}
+body{         
+   
+    background-image: url(../imagenes/images.jpg);
+    color: #000099;
+}
+img.imag1{
+    width: 70px;
+    height: 50px;
+    
+
+}
+img.comentario{    
+    float: right;    
+    text-align: center;
+    width: 10%;
+    height: 10%;
+
+}
+h1{
+    font-style: italic;                 
+    text-align: center;
+    color:#000099;
+   
+}
+
+h3{
+    text-align: left;
+}
+li{
+    text-align: left;
+}
+table{
+    float: left;
+}
+div.left {
+    width: 25%;
+    height: 80%;
+    text-align: Justify;
+    float: left;
+    border: 2px solid blue;
+    margin: 3px 3px 3px 3px;
+    height: 450px;
+    overflow: auto;
+}
+div.middle {
+    width: 40%;
+    text-align: Justify;                 
+    height: 450px;
+    border: 2px solid blue;
+    float: left;
+    margin:  3px 3px 3px 3px;
+    overflow: auto;
+}
+div.right {
+    width: 25%;
+    text-align: Justify;
+    float: left;             
+    height: 80%;
+    border: 2px solid blue;
+    margin:  3px 3px 3px 3px;
+    overflow: auto;
+    height: 450px;
+}
+div.head{
+    width: 90%;
+    height: 5%;
+}
+a.borrar{
+    color: red;
+}
+div.middlec {
+    width: 50%;
+    text-align: justify;                 
+    height: 80%;
+    border: 2px solid red;
+    float: left;
+    margin: 40px 25px 60px 250px;
+    alignment-adjust: auto;
+    alignment-adjust: central;
+    height: 450px;
+    overflow: auto;
+}
+span{
+    font-weight:bold;
+}
+
+div.inicio{
+    float: left;
+}
